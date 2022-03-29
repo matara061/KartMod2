@@ -3599,6 +3599,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &229167680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 6aba5d5cbbb6df346ba45c2991fcaf00,
+    type: 3}
+  m_PrefabInstance: {fileID: 229167675}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &229167681
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229167680}
+  m_Material: {fileID: 13400000, guid: 83f0e1b2590734b80bda8c5dcda941da, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 6aba5d5cbbb6df346ba45c2991fcaf00, type: 3}
 --- !u!1001 &232559172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5961,7 +5981,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
+  m_ForceAppPointDistance: 0.4
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -17235,7 +17255,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
+  m_ForceAppPointDistance: 0.4
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -17332,7 +17352,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
+  m_ForceAppPointDistance: 0.4
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -18806,7 +18826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1329093948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29092,7 +29112,7 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
-  m_ForceAppPointDistance: 0
+  m_ForceAppPointDistance: 0.4
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
