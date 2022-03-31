@@ -1280,6 +1280,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 204263330}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &74369565 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+    type: 3}
+  m_PrefabInstance: {fileID: 371403146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &82526597 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: c536be666f60a094ca84fdea79a89adb,
@@ -1908,13 +1914,13 @@ GameObject:
   - component: {fileID: 102050867}
   - component: {fileID: 102050866}
   - component: {fileID: 102050865}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PetKart
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &102050865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1944,8 +1950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TopSpeed: 200
   Acceleration: 200
-  ReverseSpeed: 100
-  Braking: 100
+  ReverseSpeed: 50
+  Braking: 80
   wheelColliderTD: {fileID: 1687756959}
   wheelColliderTE: {fileID: 1096928732}
   wheelColliderDD: {fileID: 151577876}
@@ -2035,10 +2041,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102050864}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: -0.7071068}
   m_LocalPosition: {x: 37.257, y: 0.8357432, z: 90.14}
   m_LocalScale: {x: 1.2068708, y: 1.2068708, z: 1.2068708}
   m_Children:
+  - {fileID: 74369565}
   - {fileID: 2074151185}
   - {fileID: 1687756958}
   - {fileID: 151577875}
@@ -2934,7 +2941,7 @@ GameObject:
   - component: {fileID: 151577875}
   - component: {fileID: 151577876}
   - component: {fileID: 151577877}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: FrenteDireita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2954,7 +2961,7 @@ Transform:
   m_Children:
   - {fileID: 1794091234}
   m_Father: {fileID: 102050871}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &151577876
 WheelCollider:
@@ -2970,21 +2977,21 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.15
-  m_ForceAppPointDistance: 0.5
-  m_Mass: 20
+  m_ForceAppPointDistance: 1
+  m_Mass: 30
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
+    m_ExtremumSlip: 0.74
+    m_ExtremumValue: 1.42
+    m_AsymptoteSlip: 0.71
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 0.79
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_ExtremumSlip: 0.72
+    m_ExtremumValue: 1.41
+    m_AsymptoteSlip: 0.99
+    m_AsymptoteValue: 0.96
+    m_Stiffness: 1.3
   m_Enabled: 1
 --- !u!114 &151577877
 MonoBehaviour:
@@ -4344,7 +4351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &275226720
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4972,6 +4979,11 @@ PrefabInstance:
       propertyPath: CollectSound
       value: 
       objectReference: {fileID: 8300000, guid: c831a3125f7c13f48971ce06d32c89ec, type: 3}
+    - target: {fileID: 6972624742742338666, guid: 6d9796d84c9e5a54fb4e014484945a46,
+        type: 3}
+      propertyPath: spawnPrefabOnPickup
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d9796d84c9e5a54fb4e014484945a46, type: 3}
 --- !u!1001 &294940160
@@ -5533,7 +5545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332541602}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6174,6 +6186,155 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c536be666f60a094ca84fdea79a89adb, type: 3}
+--- !u!1001 &371403146
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 102050871}
+    m_Modifications:
+    - target: {fileID: 5054520093232479069, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113696693541245, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113696693541247, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8285891
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8285891
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8285889
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4137897
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4646255
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.24692021
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99977016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000007450581
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.021438984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153168, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153169, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_Name
+      value: ArcadeEngineAudio (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153169, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113697866153169, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113698253163164, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113698253163166, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113698274104284, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141113698274104286, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5603247989726288845, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916209065845860529, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548943313072018857, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548943313072018857, guid: 129aa9342650245cbadf61f8391f3878,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e92cf848e62569a45b1f8cc697211084, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 129aa9342650245cbadf61f8391f3878, type: 3}
 --- !u!1 &382620468
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,6 +6754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pneu2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 299a07c549198f1409c63c64061690a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 299a07c549198f1409c63c64061690a4, type: 3}
 --- !u!1 &392400823
@@ -6869,7 +7035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 413018811}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10439,6 +10605,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315839542190839936, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
+        type: 3}
+      propertyPath: playerKart
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315839542190839936, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
+        type: 3}
+      propertyPath: autoFindKarts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1315839542190839937, guid: b26c4a65cf4c6475a92bfd03c2c3282b,
         type: 3}
@@ -15387,6 +15563,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pneu (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48bfe702379323342abce0dfa9f6db3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48bfe702379323342abce0dfa9f6db3c, type: 3}
 --- !u!1001 &968530579
@@ -15713,7 +15894,7 @@ GameObject:
   - component: {fileID: 973784395}
   - component: {fileID: 973784396}
   - component: {fileID: 973784397}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: FrenteEsquerda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15733,7 +15914,7 @@ Transform:
   m_Children:
   - {fileID: 332541602}
   m_Father: {fileID: 102050871}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &973784396
 WheelCollider:
@@ -15749,21 +15930,21 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.15
-  m_ForceAppPointDistance: 0.5
-  m_Mass: 20
+  m_ForceAppPointDistance: 1
+  m_Mass: 30
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
+    m_ExtremumSlip: 0.74
+    m_ExtremumValue: 1.42
+    m_AsymptoteSlip: 0.71
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 0.79
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_ExtremumSlip: 0.72
+    m_ExtremumValue: 1.41
+    m_AsymptoteSlip: 0.99
+    m_AsymptoteValue: 0.96
+    m_Stiffness: 1.3
   m_Enabled: 1
 --- !u!114 &973784397
 MonoBehaviour:
@@ -15871,6 +16052,11 @@ PrefabInstance:
       propertyPath: CollectSound
       value: 
       objectReference: {fileID: 8300000, guid: c831a3125f7c13f48971ce06d32c89ec, type: 3}
+    - target: {fileID: 6972624742742338666, guid: 6d9796d84c9e5a54fb4e014484945a46,
+        type: 3}
+      propertyPath: spawnPrefabOnPickup
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d9796d84c9e5a54fb4e014484945a46, type: 3}
 --- !u!1 &974470884
@@ -15883,7 +16069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 974470886}
   - component: {fileID: 974470885}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Back car 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16129,6 +16315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pneu
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48bfe702379323342abce0dfa9f6db3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48bfe702379323342abce0dfa9f6db3c, type: 3}
@@ -17050,7 +17241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1094971783}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AjusteCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17069,7 +17260,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 102050871}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1096928730
 GameObject:
@@ -17082,7 +17273,7 @@ GameObject:
   - component: {fileID: 1096928731}
   - component: {fileID: 1096928732}
   - component: {fileID: 1096928733}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TrasEsquerda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17102,7 +17293,7 @@ Transform:
   m_Children:
   - {fileID: 413018811}
   m_Father: {fileID: 102050871}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &1096928732
 WheelCollider:
@@ -17118,21 +17309,21 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.15
-  m_ForceAppPointDistance: 0.5
+  m_ForceAppPointDistance: 1
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_ExtremumSlip: 1.02
+    m_ExtremumValue: 2
+    m_AsymptoteSlip: 0.95
+    m_AsymptoteValue: 0.62
+    m_Stiffness: 1.18
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_ExtremumSlip: 0.72
+    m_ExtremumValue: 1.41
+    m_AsymptoteSlip: 0.99
+    m_AsymptoteValue: 0.96
+    m_Stiffness: 1.3
   m_Enabled: 1
 --- !u!114 &1096928733
 MonoBehaviour:
@@ -18808,7 +18999,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1223243886}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20290,6 +20481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pneu2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 299a07c549198f1409c63c64061690a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 299a07c549198f1409c63c64061690a4, type: 3}
@@ -25588,7 +25784,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 68ecfb22fca735c49b9ce2110f4e1761,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68ecfb22fca735c49b9ce2110f4e1761,
         type: 3}
@@ -25659,6 +25855,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Turbo
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 68ecfb22fca735c49b9ce2110f4e1761,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ecfb22fca735c49b9ce2110f4e1761, type: 3}
@@ -26318,7 +26519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679582200}
   - component: {fileID: 1679582201}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Caveira (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26615,7 +26816,7 @@ GameObject:
   - component: {fileID: 1687756958}
   - component: {fileID: 1687756959}
   - component: {fileID: 1687756960}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TrasDireita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26635,7 +26836,7 @@ Transform:
   m_Children:
   - {fileID: 1223243886}
   m_Father: {fileID: 102050871}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &1687756959
 WheelCollider:
@@ -26651,21 +26852,21 @@ WheelCollider:
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0.15
-  m_ForceAppPointDistance: 0.5
+  m_ForceAppPointDistance: 1
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.8
-    m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_ExtremumSlip: 1.02
+    m_ExtremumValue: 2
+    m_AsymptoteSlip: 0.95
+    m_AsymptoteValue: 0.62
+    m_Stiffness: 1.18
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
-    m_ExtremumValue: 1
-    m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_ExtremumSlip: 0.72
+    m_ExtremumValue: 1.41
+    m_AsymptoteSlip: 0.99
+    m_AsymptoteValue: 0.96
+    m_Stiffness: 1.3
   m_Enabled: 1
 --- !u!114 &1687756960
 MonoBehaviour:
@@ -26867,6 +27068,11 @@ PrefabInstance:
       propertyPath: CollectSound
       value: 
       objectReference: {fileID: 8300000, guid: c831a3125f7c13f48971ce06d32c89ec, type: 3}
+    - target: {fileID: 6972624742742338666, guid: 6d9796d84c9e5a54fb4e014484945a46,
+        type: 3}
+      propertyPath: spawnPrefabOnPickup
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d9796d84c9e5a54fb4e014484945a46, type: 3}
 --- !u!1001 &1722694686
@@ -27456,7 +27662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746024514}
   - component: {fileID: 1746024515}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Caveira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27852,7 +28058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1794091234}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
