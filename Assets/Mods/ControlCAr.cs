@@ -64,6 +64,7 @@ public class ControlCAr : MonoBehaviour
             wheelColliderDE.brakeTorque = 00;
         }
 
+
         wheelColliderDD.steerAngle = Input.TurnInput * 30;
         wheelColliderDE.steerAngle = Input.TurnInput * 30;
     }
