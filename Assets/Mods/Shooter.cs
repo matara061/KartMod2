@@ -26,7 +26,7 @@ public class Shooter : MonoBehaviour
         {
             GameObject received = itemReceived.GetItem();
             if (received != null)
-            Instantiate(received, target.transform);
+            Instantiate(received, target.transform.position, target.transform.rotation);
         }
     }
 
