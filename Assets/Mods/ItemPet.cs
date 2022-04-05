@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ItemPet : MonoBehaviour
 {
- 
- public GameObject pickupEffect;
+    
+ public GameObject pickupEffect; // Efeito das particulas
+ public GameObject meshObject; // Rotação do objeto
+   void Update()
+    {
+        meshObject.transform.Rotate(0,0,0);
+        meshObject.transform.Translate(0, Mathf.Sin(Time.time*8)*0.20f, 0);
+    }
  void OnTriggerEnter (Collider other)
  {
 
@@ -21,4 +27,5 @@ public class ItemPet : MonoBehaviour
 
      Destroy(gameObject);
  }
+
 }
