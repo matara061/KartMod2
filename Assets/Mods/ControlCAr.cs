@@ -83,4 +83,13 @@ public class ControlCAr : MonoBehaviour
 
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bola"))
+        {
+           // print("recebido");
+            gameObject.transform.Rotate(0, 180, 0);
+        }
+    }
 }

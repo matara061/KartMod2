@@ -159,6 +159,7 @@ namespace KartGame.AI
                 AddReward(PassCheckpointReward);
                 m_CheckpointIndex = index;
             }
+
         }
 
         void FindCheckpointIndex(Collider checkPoint, out int index)

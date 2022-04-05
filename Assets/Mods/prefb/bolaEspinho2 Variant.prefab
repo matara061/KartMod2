@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bolaEspinho2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 632f91f2a34ba774798021f1bf9ca459,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bola
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632f91f2a34ba774798021f1bf9ca459, type: 3}
 --- !u!1 &6698521083729715419 stripped
@@ -75,19 +80,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5779390175819963786}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &3143249555127072394
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6698521083729715419}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: -0.12, y: 0.31, z: 0}
 --- !u!54 &8563221672114613900
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -104,3 +96,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &3143249555127072394
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698521083729715419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: -0.12, y: 0.31, z: 0}
+--- !u!135 &7248588009155256985
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698521083729715419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0.12, y: 0.31, z: 0}
+--- !u!114 &-8667540248980012339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698521083729715419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e86314264adb842b68c11ebab6a4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
