@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class ItemPet : MonoBehaviour
 {
-    
+
+ float timetoDestroy = 5f;
  public GameObject pickupEffect; // Efeito das particulas
  public GameObject meshObject; // Rotação do objeto
-   void Update()
+ Rigidbody player_Rigidbody;
+
+
+    void Start()
+    {
+        player_Rigidbody = GetComponent<Rigidbody>();
+    }
+    void Update()
     {
         meshObject.transform.Rotate(0,0,0);
-        meshObject.transform.Translate(0, Mathf.Sin(Time.time*8)*0.20f, 0);
+        meshObject.transform.Translate(Mathf.Sin(Time.time * 8) * 0.20f, 0, 0);
     }
  void OnTriggerEnter (Collider other)
  {
 
      if (other.CompareTag("Player"))
      {
-         Pickup();
-     }
+         Pickup(other);
+         
+        }
  }
 
- void Pickup()
+ void Pickup(Collider player)
  {
      Instantiate(pickupEffect, transform.position, transform.rotation);
-
-     Destroy(gameObject);
- }
+        player.transform.Translate(5, 20, 0);
+        Destroy(gameObject, timetoDestroy);
+    }
 
 }
