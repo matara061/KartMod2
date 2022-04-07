@@ -106,6 +106,15 @@ public class ControlCAr : MonoBehaviour
             Acceleration += 1000;
            // Debug.Log("ola" + Acceleration);
 
+        }else
+            if (other.gameObject.CompareTag("Raio"))
+        {
+
+            TopSpeed = 100;
+            Acceleration = 50;
+            // Debug.Log("ola" + Acceleration);
+
         }
+
     }
 }

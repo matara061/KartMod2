@@ -8,6 +8,7 @@ TagManager:
   - Capacete
   - "Foguet\xE3o"
   - Foguetao
+  - Raio
   layers:
   - Default
   - TransparentFX
