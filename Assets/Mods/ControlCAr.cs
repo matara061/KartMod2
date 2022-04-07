@@ -17,7 +17,7 @@ public class ControlCAr : MonoBehaviour
     [Tooltip("How quickly the kart slows down when the brake is applied.")]
     public float Braking;
 
-    public Rigidbody rigidbody;
+     Rigidbody rb;
 
     IInput[] m_Inputs;
     public WheelCollider wheelColliderTD;
@@ -29,7 +29,7 @@ public class ControlCAr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         m_Inputs = GetComponents<IInput>();
     }
 
@@ -67,6 +67,8 @@ public class ControlCAr : MonoBehaviour
 
         wheelColliderDD.steerAngle = Input.TurnInput * 30;
         wheelColliderDE.steerAngle = Input.TurnInput * 30;
+
+     
     }
 
     void GatherInputs()
@@ -90,12 +92,20 @@ public class ControlCAr : MonoBehaviour
         {
            // print("recebido");
             gameObject.transform.Rotate(0, 180, 0);
-        }
+        } else
         if (other.gameObject.CompareTag("Capacete"))
         {
             //print("recebido");
             //rigidbody.AddForce(0,100,0, ForceMode.Impulse);
             transform.Translate(new Vector3(0, 300, 0) * Time.deltaTime);
+        } else
+            if (other.gameObject.CompareTag("Foguetao"))
+            {
+
+            TopSpeed += 1000;
+            Acceleration += 1000;
+           // Debug.Log("ola" + Acceleration);
+
         }
     }
 }
