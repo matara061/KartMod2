@@ -91,5 +91,10 @@ public class ControlCAr : MonoBehaviour
            // print("recebido");
             gameObject.transform.Rotate(0, 180, 0);
         }
+        if (other.gameObject.CompareTag("Capacete"))
+        {
+           // print("recebido");
+            rigidbody.AddForce(transform.up * 10);
+        }
     }
 }
