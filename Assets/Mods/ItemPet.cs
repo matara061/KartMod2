@@ -18,7 +18,7 @@ public class ItemPet : MonoBehaviour
     void Update()
     {
         meshObject.transform.Rotate(0,0,0);
-        meshObject.transform.Translate(Mathf.Sin(Time.time * 8) * 0.20f, 0, 0);
+        meshObject.transform.Translate(0, 0, Mathf.Sin(Time.time * 8) * 0.20f);
     }
  void OnTriggerEnter (Collider other)
  {
