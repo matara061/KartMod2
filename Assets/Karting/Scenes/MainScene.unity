@@ -2101,6 +2101,7 @@ MonoBehaviour:
   Acceleration: 100
   ReverseSpeed: 100
   Braking: 80
+  rigidbody: {fileID: 0}
   wheelColliderTD: {fileID: 1851034438}
   wheelColliderTE: {fileID: 1516313474}
   wheelColliderDD: {fileID: 1466647003}
@@ -2742,6 +2743,7 @@ MonoBehaviour:
   Acceleration: 200
   ReverseSpeed: 50
   Braking: 80
+  rigidbody: {fileID: 0}
   wheelColliderTD: {fileID: 1687756959}
   wheelColliderTE: {fileID: 1096928732}
   wheelColliderDD: {fileID: 151577876}
@@ -5979,8 +5981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 543384877}
-  - {fileID: 543384877}
+  - {fileID: 7114253375618137005, guid: 1bb12ce6321115a4894cf02d4470af06, type: 3}
   - {fileID: 6698521083729715419, guid: 24bc2c1a84a152e49bdc9ed4060e28c2, type: 3}
   count: 0
   itenPresent: 0
@@ -6768,6 +6769,7 @@ MonoBehaviour:
   Acceleration: 100
   ReverseSpeed: 80
   Braking: 80
+  rigidbody: {fileID: 0}
   wheelColliderTD: {fileID: 383477150}
   wheelColliderTE: {fileID: 2000281158}
   wheelColliderDD: {fileID: 757650485}
@@ -17631,6 +17633,7 @@ MonoBehaviour:
   Acceleration: 100
   ReverseSpeed: 100
   Braking: 80
+  rigidbody: {fileID: 0}
   wheelColliderTD: {fileID: 1875863291}
   wheelColliderTE: {fileID: 742449483}
   wheelColliderDD: {fileID: 1599655369}
@@ -18738,6 +18741,7 @@ MonoBehaviour:
   Acceleration: 110
   ReverseSpeed: 100
   Braking: 100
+  rigidbody: {fileID: 0}
   wheelColliderTD: {fileID: 793411581}
   wheelColliderTE: {fileID: 964858942}
   wheelColliderDD: {fileID: 1077199803}
@@ -25840,6 +25844,7 @@ MonoBehaviour:
   Acceleration: 100
   ReverseSpeed: 200
   Braking: 80
+  rigidbody: {fileID: 0}
   wheelColliderTD: {fileID: 1217103572}
   wheelColliderTE: {fileID: 394475715}
   wheelColliderDD: {fileID: 1212243513}

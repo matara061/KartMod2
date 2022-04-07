@@ -17,7 +17,7 @@ public class ControlCAr : MonoBehaviour
     [Tooltip("How quickly the kart slows down when the brake is applied.")]
     public float Braking;
 
-    Rigidbody rigidbody;
+    public Rigidbody rigidbody;
 
     IInput[] m_Inputs;
     public WheelCollider wheelColliderTD;
@@ -93,8 +93,9 @@ public class ControlCAr : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Capacete"))
         {
-           // print("recebido");
-            rigidbody.AddForce(transform.up * 10);
+            //print("recebido");
+            //rigidbody.AddForce(0,100,0, ForceMode.Impulse);
+            transform.Translate(new Vector3(0, 300, 0) * Time.deltaTime);
         }
     }
 }
