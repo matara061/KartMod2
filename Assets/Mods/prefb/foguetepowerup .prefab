@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4455550743360976766}
   - component: {fileID: 4233344151139305144}
   - component: {fileID: 6944480116650723069}
+  - component: {fileID: 8938483783890286757}
   m_Layer: 0
   m_Name: 'foguetepowerup '
   m_TagString: Foguetao
@@ -187,3 +188,18 @@ MonoBehaviour:
   onPowerupFinishCooldown:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8938483783890286757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7473349355490449434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213e23ff14de2d119a77dfe836a3490f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 3576924614362489592, guid: 4a919ff208278c347a4582e77e55ed83,
+    type: 3}
+  Sound: {fileID: 0}

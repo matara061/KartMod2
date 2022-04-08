@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9076772817986813906}
   - component: {fileID: -8332531746747471985}
   - component: {fileID: 7037407681507588750}
+  - component: {fileID: 8095695598471367394}
   m_Layer: 0
   m_Name: Capacete
   m_TagString: Capacete
@@ -139,3 +140,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.52316, y: 2.997799, z: 4.6288047}
   m_Center: {x: -0.0000013113022, y: 0.122642934, z: 0.05282235}
+--- !u!114 &8095695598471367394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114253375618137005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213e23ff14de2d119a77dfe836a3490f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 8714244275622671896, guid: abf8d5b763621654486813c5c8af8234,
+    type: 3}
+  Sound: {fileID: 0}
