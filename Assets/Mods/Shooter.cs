@@ -8,6 +8,9 @@ public class Shooter : MonoBehaviour
     IInput[] m_Inputs;
     public ItemReceived itemReceived;
     public GameObject target;
+    public GameObject target2;
+    public ControlCAr car;
+    public Rigidbody rb;
 
     public InputData Input { get; private set; }
 
@@ -15,6 +18,7 @@ public class Shooter : MonoBehaviour
     void Start()
     {
         m_Inputs = GetComponents<IInput>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -26,7 +30,27 @@ public class Shooter : MonoBehaviour
         {
             GameObject received = itemReceived.GetItem();
             if (received != null)
+            {
+                if(itemReceived.count == 1)
+                {
+                    Instantiate(received, target2.transform.position, target.transform.rotation);
+                }else
+                    if(itemReceived.count == 2)
+                {
+                    rb.AddForce(-transform.forward * 100000);
+                   // car.TopSpeed -= 100;
+                   // car.Acceleration -= 50;
+                }
+                else if(itemReceived.count == 3)
+                {
+                    rb.AddForce(transform.forward * 1000000);
+                   // car.TopSpeed += 100;
+                   // car.Acceleration += 50;
+                }else 
+                    if(itemReceived.count == 4 || itemReceived.count == 0)
             Instantiate(received, target.transform.position, target.transform.rotation);
+
+            }
         }
     }
 

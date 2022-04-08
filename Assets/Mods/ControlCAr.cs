@@ -99,21 +99,11 @@ public class ControlCAr : MonoBehaviour
             //rigidbody.AddForce(0,100,0, ForceMode.Impulse);
             transform.Translate(new Vector3(0, 300, 0) * Time.deltaTime);
         } else
-            if (other.gameObject.CompareTag("Foguetao"))
-            {
-
-            TopSpeed += 1000;
-            Acceleration += 1000;
-           // Debug.Log("ola" + Acceleration);
-
-        }else
-            if (other.gameObject.CompareTag("Raio"))
+            if (other.gameObject.CompareTag("Power"))
         {
-
-            TopSpeed = 100;
-            Acceleration = 50;
-            // Debug.Log("ola" + Acceleration);
-
+            TopSpeed += 100;
+            Acceleration += 50;
+            // modo invencivel
         }
 
     }

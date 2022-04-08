@@ -167,8 +167,8 @@ MonoBehaviour:
   active: 0
   boostStats:
     modifiers:
-      TopSpeed: 0
-      Acceleration: 0
+      TopSpeed: 50
+      Acceleration: 30
       ReverseSpeed: 0
       ReverseAcceleration: 0
       AccelerationCurve: 0
