@@ -37,15 +37,11 @@ public class Shooter : MonoBehaviour
                 }else
                     if(itemReceived.count == 2)
                 {
-                    rb.AddForce(-transform.forward * 100000);
-                   // car.TopSpeed -= 100;
-                   // car.Acceleration -= 50;
+                    rb.drag = 1; // add pet dps
                 }
                 else if(itemReceived.count == 3)
                 {
                     rb.AddForce(transform.forward * 1000000);
-                   // car.TopSpeed += 100;
-                   // car.Acceleration += 50;
                 }else 
                     if(itemReceived.count == 4 || itemReceived.count == 0)
             Instantiate(received, target.transform.position, target.transform.rotation);

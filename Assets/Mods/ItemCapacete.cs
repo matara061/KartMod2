@@ -13,7 +13,7 @@ public class ItemCapacete : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(transform.forward * 50);
+        rb.AddForce(transform.right * -500);
     }
 
     private void OnTriggerEnter(Collider other)
