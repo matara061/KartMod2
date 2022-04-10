@@ -25,16 +25,21 @@ public class ItemPet : MonoBehaviour
 
      if (other.CompareTag("Player"))
      {
-         Pickup(other);
+         StartCoroutine(Pickup(other));
          
         }
  }
 
- void Pickup(Collider player)
+// Enumerator é para a função couratine, que faz com que o sistema tenha a função de espera e pausa.
+ IEnumerator Pickup(Collider player)
  {
      Instantiate(pickupEffect, transform.position, transform.rotation);
         player.transform.Translate(5, 20, 0);
+
+        yield return new WaitForSeconds(3f);
+
         Destroy(gameObject, timetoDestroy);
+        
     }
 
 }

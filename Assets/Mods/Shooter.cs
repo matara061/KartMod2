@@ -14,7 +14,13 @@ public class Shooter : MonoBehaviour
 
     public InputData Input { get; private set; }
 
-    // Start is called before the first frame update
+//Efeitos
+    public GameObject pickupEffect;
+    public GameObject pickupEffect1;
+    public GameObject pickupEffect2;
+    public GameObject pickupEffect3;
+    public GameObject pickupEffect4;
+
     void Start()
     {
         m_Inputs = GetComponents<IInput>();
@@ -31,25 +37,63 @@ public class Shooter : MonoBehaviour
             GameObject received = itemReceived.GetItem();
             if (received != null)
             {
-                if(itemReceived.count == 1)
+                if(itemReceived.count == 1) // Capacete
                 {
                     Instantiate(received, target2.transform.position, target.transform.rotation);
                 }else
-                    if(itemReceived.count == 2)
+
+                    if(itemReceived.count == 2) // Raio???
                 {
-                    rb.drag = 1; // add pet dps
-                }
-                else if(itemReceived.count == 3)
+                    rb.drag = 1;
+                    Instantiate(pickupEffect2, transform.position, transform.rotation);
+                    Instantiate(pickupEffect3, transform.position, transform.rotation);
+
+               }
+                else if(itemReceived.count == 3)  // foguete
                 {
                     rb.AddForce(transform.forward * 1000000);
+                    Instantiate(pickupEffect, transform.position, transform.rotation); //~ Duvida professor
+                    Instantiate(pickupEffect1, transform.position, transform.rotation);
                 }else 
-                    if(itemReceived.count == 4 || itemReceived.count == 0)
+                    if(itemReceived.count == 4 || itemReceived.count == 0) // coração e BolaEspinho
             Instantiate(received, target.transform.position, target.transform.rotation);
 
             }
         }
     }
 
+    //Falta um pequeno ajuste no codigo abaixo, vou deixar comentado para o prof me helpar na segunda
+
+//IEnumerator Pickup(Collider player)
+// {
+     //rb.drag = 1; // add pet dps
+
+    //yield return new WaitForSeconds(1f);
+
+       // rb.drag = 0.1f;
+        
+    //}
+
+    //Não se pode usar trigger com input...
+
+    //void OnTriggerEnter (Collider other)
+ //{
+     //if (Input.Fire)
+        //{
+            //GameObject received = itemReceived.GetItem();
+           // if (received != null)
+           // {
+           //      if(itemReceived.count == 2)
+           //     {
+           //         StartCoroutine(Pickup(other));
+
+            //    }
+
+            //}
+      //  }
+
+ //}
+    
     void GatherInputs()
     {
         // reset input
@@ -65,3 +109,4 @@ public class Shooter : MonoBehaviour
         }
     }
 }
+
