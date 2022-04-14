@@ -12,8 +12,10 @@ public class img : MonoBehaviour
     public Sprite capacete;
     public Sprite raio;
     public ItemReceived item;
+    public ItemReceived item2;
     public Image imagem;
-   // SpriteRenderer spriteR;
+    public Image imagem2;
+    // SpriteRenderer spriteR;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class img : MonoBehaviour
     void Update()
     {
         Troca();
+        Troca2();
     }
 
     public void Troca()
@@ -49,6 +52,37 @@ public class img : MonoBehaviour
 
             }else
                 if(item.count == 4)
+            {
+
+            }
+        }
+    }
+
+    public void Troca2()
+    {
+        if (item2.itenPresent)
+        {
+            if (item2.count == 0)
+            {
+                imagem2.sprite = bola;
+            }
+            else
+                    if (item2.count == 1)
+            {
+
+            }
+            else
+                    if (item2.count == 2)
+            {
+
+            }
+            else
+                    if (item2.count == 3)
+            {
+
+            }
+            else
+                    if (item2.count == 4)
             {
 
             }
