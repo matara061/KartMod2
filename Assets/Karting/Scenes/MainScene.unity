@@ -23383,6 +23383,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 21300000, guid: 2b1d334f969c9f14a9303e5c23beac58, type: 3}
+  foguete: {fileID: 0}
+  coracao: {fileID: 0}
+  capacete: {fileID: 0}
+  raio: {fileID: 0}
   item: {fileID: 275226727}
   imagem: {fileID: 1757109923}
 --- !u!114 &838722643
@@ -58932,6 +58936,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PetKart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697548051067923542, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697548051067923548, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
+        type: 3}
+      propertyPath: count
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697548051067923548, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
+        type: 3}
+      propertyPath: itenPresent
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1697548051067923548, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
         type: 3}

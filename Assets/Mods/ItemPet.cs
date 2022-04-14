@@ -5,16 +5,10 @@ using UnityEngine;
 public class ItemPet : MonoBehaviour
 {
 
- float timetoDestroy = 5f;
+ float timetoDestroy = 3f;
  public GameObject pickupEffect; // Efeito das particulas
  public GameObject meshObject; // Rotação do objeto
- Rigidbody player_Rigidbody;
-
-
-    void Start()
-    {
-        player_Rigidbody = GetComponent<Rigidbody>();
-    }
+ 
     void Update()
     {
         meshObject.transform.Rotate(0,0,0);
@@ -30,16 +24,24 @@ public class ItemPet : MonoBehaviour
         }
  }
 
-// Enumerator é para a função couratine, que faz com que o sistema tenha a função de espera e pausa.
- IEnumerator Pickup(Collider player)
- {
-     Instantiate(pickupEffect, transform.position, transform.rotation);
+    // Enumerator é para a função couratine, que faz com que o sistema tenha a função de espera e pausa.
+    IEnumerator Pickup(Collider player)
+    {
+        // Podemos utilizar a função abaixo para o efeito instanciar no game object escolhido ~ no caso, o carro.
+        GameObject clone = (GameObject)Instantiate(pickupEffect, transform.position, transform.rotation);
+
+        // para a hierarquia
+        clone.transform.parent = player.transform;
+
+        //Efeito
         player.transform.Translate(5, 20, 0);
 
         yield return new WaitForSeconds(3f);
 
+        //Destruir o clone
+        Destroy(clone.gameObject, timetoDestroy);
         Destroy(gameObject, timetoDestroy);
-        
+
     }
 
 }

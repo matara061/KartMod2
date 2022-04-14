@@ -11,10 +11,11 @@ public class Shooter : MonoBehaviour
     public GameObject target2;
     public ControlCAr car;
     public Rigidbody rb;
+    Vector3 m_ZAxis;
 
     public InputData Input { get; private set; }
 
-//Efeitos
+    //Efeitos
     public GameObject pickupEffect;
     public GameObject pickupEffect1;
     public GameObject pickupEffect2;
@@ -25,6 +26,10 @@ public class Shooter : MonoBehaviour
     {
         m_Inputs = GetComponents<IInput>();
         rb = GetComponent<Rigidbody>();
+
+        //Movimentar carro flutuando
+        //m_ZAxis = new Vector3(15, 0, 0);
+       
     }
 
     // Update is called once per frame
@@ -37,63 +42,78 @@ public class Shooter : MonoBehaviour
             GameObject received = itemReceived.GetItem();
             if (received != null)
             {
-                if(itemReceived.count == 1) // Capacete
+
+                if (itemReceived.count == 1) // Capacete
                 {
                     Instantiate(received, target2.transform.position, target.transform.rotation);
-                }else
+                    GetComponent<ItemReceived>().itenPresent = false; // para o item desativar corretamente dps de utilizado ~ ajuda a resetar status
+                }
+                else
 
-                    if(itemReceived.count == 2) // Raio???
+                    if (itemReceived.count == 2) // Raio
                 {
-                    rb.drag = 1;
+                    StartCoroutine(Pickup());
                     Instantiate(pickupEffect2, transform.position, transform.rotation);
                     Instantiate(pickupEffect3, transform.position, transform.rotation);
+                    GetComponent<ItemReceived>().itenPresent = false;
 
-               }
-                else if(itemReceived.count == 3)  // foguete
+                }
+                else if (itemReceived.count == 3)  // Foguete
                 {
                     rb.AddForce(transform.forward * 1000000);
-                    Instantiate(pickupEffect, transform.position, transform.rotation); //~ Duvida professor
+                    Instantiate(pickupEffect, transform.position, transform.rotation);
                     Instantiate(pickupEffect1, transform.position, transform.rotation);
-                }else 
-                    if(itemReceived.count == 4 || itemReceived.count == 0) // coração e BolaEspinho
-            Instantiate(received, target.transform.position, target.transform.rotation);
+                    GetComponent<ItemReceived>().itenPresent = false;
+                }
+                else
+                    if (itemReceived.count == 0) // BolaEspinho
+                {
+                    Instantiate(received, target.transform.position, target.transform.rotation);
+                    GetComponent<ItemReceived>().itenPresent = false;
+                }
+                else
+                    if (itemReceived.count == 4 ) // Coração
+                {
+                    Instantiate(received, target.transform.position, target.transform.rotation);
+                    StartCoroutine(Pickup2());
+                    GetComponent<ItemReceived>().itenPresent = false;
+
+                }
+
 
             }
         }
+
     }
 
-    //Falta um pequeno ajuste no codigo abaixo, vou deixar comentado para o prof me helpar na segunda
 
-//IEnumerator Pickup(Collider player)
-// {
-     //rb.drag = 1; // add pet dps
+    IEnumerator Pickup()
+    {
+        rb.drag = 1; 
 
-    //yield return new WaitForSeconds(1f);
+        //Duração do efeito, dps desse tempo retorna ao status normal
+        yield return new WaitForSeconds(2f);
 
-       // rb.drag = 0.1f;
-        
-    //}
+        rb.drag = 0.1f;
 
-    //Não se pode usar trigger com input...
+    }
 
-    //void OnTriggerEnter (Collider other)
- //{
-     //if (Input.Fire)
-        //{
-            //GameObject received = itemReceived.GetItem();
-           // if (received != null)
-           // {
-           //      if(itemReceived.count == 2)
-           //     {
-           //         StartCoroutine(Pickup(other));
+    IEnumerator Pickup2()
+    {
+        //Só uma pausinha para não executar tudo de uma vez
+        yield return new WaitForSeconds(0.01f);
 
-            //    }
+        //Congela a fisica do kart
+        rb.constraints = RigidbodyConstraints.FreezePositionY;
+        //rb.velocity = -m_ZAxis;
 
-            //}
-      //  }
+        yield return new WaitForSeconds(3f);
 
- //}
-    
+        //retorna a fisica do kart
+        rb.constraints = RigidbodyConstraints.None;
+    }
+
+
     void GatherInputs()
     {
         // reset input

@@ -7,8 +7,10 @@ public class VFXItem : MonoBehaviour
 {
     public GameObject pickupEffect;
     public AudioSource Sound;
+    float timetoDestroy = 5f;
     
- void OnTriggerEnter (Collider other)
+
+    void OnTriggerEnter (Collider other)
  {
 
      if (other.CompareTag("Player"))
@@ -19,9 +21,11 @@ public class VFXItem : MonoBehaviour
  }
  void Pickup(Collider player)
  {
-     Instantiate(pickupEffect, transform.position, transform.rotation);
+        Instantiate(pickupEffect, transform.position, transform.rotation);
         
-        
+
+
+
     }
 
 
