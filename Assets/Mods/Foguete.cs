@@ -20,6 +20,7 @@ public class Foguete : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            
             // print("recebido");
             Destroy(gameObject);
         }

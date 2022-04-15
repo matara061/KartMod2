@@ -46,6 +46,7 @@ public class Shooter : MonoBehaviour
                 if (itemReceived.count == 1) // Capacete
                 {
                     Instantiate(received, target2.transform.position, target.transform.rotation);
+                    FindObjectOfType<AudioManager2>().Play("Shoot");
                     GetComponent<ItemReceived>().itenPresent = false; // para o item desativar corretamente dps de utilizado ~ ajuda a resetar status
                 }
                 else
@@ -55,6 +56,7 @@ public class Shooter : MonoBehaviour
                     StartCoroutine(Pickup());
                     Instantiate(pickupEffect2, transform.position, transform.rotation);
                     Instantiate(pickupEffect3, transform.position, transform.rotation);
+                    FindObjectOfType<AudioManager2>().Play("Raio");
                     GetComponent<ItemReceived>().itenPresent = false;
 
                 }
@@ -63,18 +65,21 @@ public class Shooter : MonoBehaviour
                     rb.AddForce(transform.forward * 1000000);
                     Instantiate(pickupEffect, transform.position, transform.rotation);
                     Instantiate(pickupEffect1, transform.position, transform.rotation);
+                    FindObjectOfType<AudioManager2>().Play("Foguete");
                     GetComponent<ItemReceived>().itenPresent = false;
                 }
                 else
                     if (itemReceived.count == 0) // BolaEspinho
                 {
                     Instantiate(received, target.transform.position, target.transform.rotation);
+                    FindObjectOfType<AudioManager2>().Play("BolaEspinhos");
                     GetComponent<ItemReceived>().itenPresent = false;
                 }
                 else
                     if (itemReceived.count == 4 ) // Coração
                 {
                     Instantiate(received, target.transform.position, target.transform.rotation);
+                    FindObjectOfType<AudioManager2>().Play("Coracao");
                     StartCoroutine(Pickup2());
                     GetComponent<ItemReceived>().itenPresent = false;
 
@@ -92,7 +97,7 @@ public class Shooter : MonoBehaviour
         rb.drag = 1; 
 
         //Duração do efeito, dps desse tempo retorna ao status normal
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         rb.drag = 0.1f;
 

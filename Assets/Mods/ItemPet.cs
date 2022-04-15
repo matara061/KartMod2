@@ -9,6 +9,8 @@ public class ItemPet : MonoBehaviour
  public GameObject pickupEffect; // Efeito das particulas
  public GameObject meshObject; // Rotação do objeto
  
+
+
     void Update()
     {
         meshObject.transform.Rotate(0,0,0);
@@ -20,9 +22,10 @@ public class ItemPet : MonoBehaviour
      if (other.CompareTag("Player"))
      {
          StartCoroutine(Pickup(other));
-         
-        }
- }
+         Destroy(gameObject, timetoDestroy);
+     }
+        FindObjectOfType<AudioManager2>().Play("Coracao");
+    }
 
     // Enumerator é para a função couratine, que faz com que o sistema tenha a função de espera e pausa.
     IEnumerator Pickup(Collider player)
@@ -34,13 +37,14 @@ public class ItemPet : MonoBehaviour
         clone.transform.parent = player.transform;
 
         //Efeito
-        player.transform.Translate(5, 20, 0);
+        player.transform.Translate(0, 20, 0);
+
+        
 
         yield return new WaitForSeconds(3f);
 
         //Destruir o clone
         Destroy(clone.gameObject, timetoDestroy);
-        Destroy(gameObject, timetoDestroy);
 
     }
 

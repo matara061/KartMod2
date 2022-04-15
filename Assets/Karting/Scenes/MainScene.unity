@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24783692, g: 0.13993481, b: 0.31054342, a: 1}
+  m_IndirectSpecularColor: {r: 0.24778426, g: 0.14032644, b: 0.31051734, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12169,7 +12169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &247600347 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c536be666f60a094ca84fdea79a89adb,
@@ -12885,7 +12884,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &262632952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c536be666f60a094ca84fdea79a89adb,
@@ -19041,7 +19039,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &382620468
 GameObject:
   m_ObjectHideFlags: 0
@@ -21841,7 +21838,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &442561191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23531,7 +23527,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 8255215019295333937, guid: 139c09de669d89546999f577551dd885,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &476688558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25326,7 +25321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &521645673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27818,7 +27812,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &575926261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28364,7 +28357,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &595908647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44155,7 +44147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &943151642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46543,7 +46534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &972543487
 GameObject:
   m_ObjectHideFlags: 0
@@ -48023,7 +48013,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1007076604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52209,7 +52198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1105449499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52300,6 +52288,86 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1105449499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1106794504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106794506}
+  - component: {fileID: 1106794505}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1106794505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106794504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800cbbf5f60ccb14089676f6bab81625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BolaEspinhos
+    clip: {fileID: 8300000, guid: 77c0f452f8f0c2b44ab91fc1453db37d, type: 3}
+    volume: 1.5
+    pitch: 0.43
+    loop: 0
+    source: {fileID: 0}
+  - name: Coracao
+    clip: {fileID: 8300000, guid: d261df8847b752b478b58cc600f35243, type: 3}
+    volume: 1.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Espinhos
+    clip: {fileID: 8300000, guid: cfb714dcf2eeafe459de4512b5e82fd1, type: 3}
+    volume: 2
+    pitch: 3
+    loop: 0
+    source: {fileID: 0}
+  - name: Raio
+    clip: {fileID: 8300000, guid: d03fa1519f91d5a4aa9965c18f30be24, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Foguete
+    clip: {fileID: 8300000, guid: 6439d912d4698a74b9224e72c099f970, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 8018ee00742ef9a4baaf6c50fb5df310, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &1106794506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106794504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -83.396194, y: 7.9996376, z: 53.421925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1114556857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52504,7 +52572,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1116514816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61245,7 +61312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &1317586952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c536be666f60a094ca84fdea79a89adb,
@@ -62464,7 +62530,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &1332589589 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 6aba5d5cbbb6df346ba45c2991fcaf00,
@@ -64290,7 +64355,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1370984967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64638,7 +64702,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &1374188018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: c536be666f60a094ca84fdea79a89adb,
@@ -65027,7 +65090,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1384460616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72757,7 +72819,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1530307990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75572,7 +75633,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &1585331891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c536be666f60a094ca84fdea79a89adb,
@@ -87565,7 +87625,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1841834009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88718,7 +88777,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1869787468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89749,7 +89807,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1896998146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91829,7 +91886,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &1946875320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95157,7 +95213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1001 &2012437419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96705,7 +96760,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &2046366382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: c536be666f60a094ca84fdea79a89adb,
@@ -99671,7 +99725,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5188872984447376182, guid: 848e19326a3e611488c952f5ba97c0cb,
     type: 3}
-  Sound: {fileID: 0}
 --- !u!1 &2088057354 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 6aba5d5cbbb6df346ba45c2991fcaf00,

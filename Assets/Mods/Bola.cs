@@ -20,6 +20,7 @@ public class Bola : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager2>().Play("Espinhos");
             // print("recebido");
             Destroy(gameObject);
         }
