@@ -20,6 +20,7 @@ public class Selecao : MonoBehaviour
 
     public void player2()
     {
+        select = 0;
         stat = 2;
     }
 

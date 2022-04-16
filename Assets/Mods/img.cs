@@ -11,6 +11,7 @@ public class img : MonoBehaviour
     public Sprite coracao;
     public Sprite capacete;
     public Sprite raio;
+    public Sprite nada;
     public ItemReceived item;
     public ItemReceived item2;
     public Image imagem;
@@ -35,27 +36,33 @@ public class img : MonoBehaviour
     {
         if (item.itenPresent)
         {
-        if (item.count == 0)
-        {
-            imagem.sprite = bola;
-        }else
-                if(item.count == 1)
+            if (item.count == 0)
+            {
+                imagem.sprite = bola;
+            }
+            else
+                    if (item.count == 1)
             {
 
-            }else
-                if (item.count == 2)
+            }
+            else
+                    if (item.count == 2)
             {
 
-            }else
-                if(item.count == 3)
+            }
+            else
+                    if (item.count == 3)
             {
 
-            }else
-                if(item.count == 4)
+            }
+            else
+                    if (item.count == 4)
             {
 
             }
         }
+        else
+            imagem.sprite = nada;
     }
 
     public void Troca2()
@@ -86,6 +93,7 @@ public class img : MonoBehaviour
             {
 
             }
-        }
+        }else
+            imagem2.sprite = nada;
     }
 }

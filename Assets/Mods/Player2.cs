@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player2 : MonoBehaviour
 {
-
-    public static Player playerInstance;
+    public static Player2 player2Instance;
 
 
     public StartManager startManager;
@@ -21,16 +20,16 @@ public class Player : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
 
-        if (playerInstance == null)
+        if (player2Instance == null)
         {
-            playerInstance = this;
+            player2Instance = this;
         }
         else
             DestroyObject(gameObject);
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -41,16 +40,17 @@ public class Player : MonoBehaviour
 
     public void kart()
     {
-        if (startManager.kart1 == 1)
+        if (startManager.kart2 == 1)
         {
             kartPet.SetActive(false);
             camPet.SetActive(false);
+
             KartMT.SetActive(true);
             camMT.SetActive(true);
            
         }
         else
-            if(startManager.kart1 == 2)
+            if (startManager.kart2 == 2)
         {
             KartMT.SetActive(false);
             camMT.SetActive(false);
@@ -58,7 +58,6 @@ public class Player : MonoBehaviour
             camPet.SetActive(true);
            
         }
-            
-    }
 
+    }
 }
