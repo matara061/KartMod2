@@ -10,6 +10,8 @@ TagManager:
   - Foguetao
   - Raio
   - Power
+  - Player2
+  - Player1
   layers:
   - Default
   - TransparentFX

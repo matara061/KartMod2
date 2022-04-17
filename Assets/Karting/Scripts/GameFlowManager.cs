@@ -17,6 +17,7 @@ public class GameFlowManager : MonoBehaviour
     [Header("Win")]
     [Tooltip("This string has to be the name of the scene you want to load when winning")]
     public string winSceneName = "WinScene";
+    public string winSceneName1 = "WinScene";
     [Tooltip("Duration of delay before the fade-to-black, if winning")]
     public float delayBeforeFadeToBlack = 4f;
     [Tooltip("Duration of delay before the win message")]
@@ -147,7 +148,7 @@ public class GameFlowManager : MonoBehaviour
         }
     }
 
-    void EndGame(bool win)
+    public void EndGame(bool win)
     {
         // unlocks the cursor before leaving the scene, to be able to click buttons
         Cursor.lockState = CursorLockMode.None;
@@ -161,6 +162,46 @@ public class GameFlowManager : MonoBehaviour
         if (win)
         {
             m_SceneToLoad = winSceneName;
+            m_TimeLoadEndGameScene = Time.time + endSceneLoadDelay + delayBeforeFadeToBlack;
+
+            // play a sound on win
+            var audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = victorySound;
+            audioSource.playOnAwake = false;
+            audioSource.outputAudioMixerGroup = AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.HUDVictory);
+            audioSource.PlayScheduled(AudioSettings.dspTime + delayBeforeWinMessage);
+
+            // create a game message
+            winDisplayMessage.delayBeforeShowing = delayBeforeWinMessage;
+            winDisplayMessage.gameObject.SetActive(true);
+        }
+        else
+        {
+            m_SceneToLoad = loseSceneName;
+            m_TimeLoadEndGameScene = Time.time + endSceneLoadDelay + delayBeforeFadeToBlack;
+
+            // create a game message
+            loseDisplayMessage.delayBeforeShowing = delayBeforeWinMessage;
+            loseDisplayMessage.gameObject.SetActive(true);
+        }
+
+        
+    }
+
+    public void EndGame1(bool win)
+    {
+        // unlocks the cursor before leaving the scene, to be able to click buttons
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        m_TimeManager.StopRace();
+
+        // Remember that we need to load the appropriate end scene after a delay
+        gameState = win ? GameState.Won : GameState.Lost;
+        endGameFadeCanvasGroup.gameObject.SetActive(true);
+        if (win)
+        {
+            m_SceneToLoad = winSceneName1;
             m_TimeLoadEndGameScene = Time.time + endSceneLoadDelay + delayBeforeFadeToBlack;
 
             // play a sound on win

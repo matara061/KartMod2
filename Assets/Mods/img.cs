@@ -58,6 +58,7 @@ public class img : MonoBehaviour
             else
                     if (item.count == 4)
             {
+                    imagem.sprite = coracao;
 
             }
         }
@@ -91,7 +92,7 @@ public class img : MonoBehaviour
             else
                     if (item2.count == 4)
             {
-
+                imagem2.sprite = coracao;
             }
         }else
             imagem2.sprite = nada;
