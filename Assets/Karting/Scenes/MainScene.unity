@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24783692, g: 0.13993481, b: 0.31054342, a: 1}
+  m_IndirectSpecularColor: {r: 0.24778426, g: 0.14032644, b: 0.31051734, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -64488,6 +64488,8 @@ GameObject:
   - component: {fileID: 1329093950}
   - component: {fileID: 1329093949}
   - component: {fileID: 1329093948}
+  - component: {fileID: 1329093956}
+  - component: {fileID: 1329093955}
   m_Layer: 0
   m_Name: CuboT
   m_TagString: Untagged
@@ -64507,9 +64509,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f292ffb948323c49ac31e54ff737ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurnInputName: Horizontal
-  AccelerateButtonName: Accelerate
-  BrakeButtonName: Brake
+  TurnInputName: Horizontal4
+  AccelerateButtonName: Accelerate4
+  BrakeButtonName: Brake4
 --- !u!114 &1329093949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64623,6 +64625,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1329093955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329093947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6f697e5eb61c743a41cd3187da0700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 5561179286890890789, guid: a3c29f0561768f74ea9b3d80f964d0b7, type: 3}
+  - {fileID: 7473349355490449434, guid: 2974c85248f949443b0aa5da8f1bba9b, type: 3}
+  - {fileID: 6698521083729715419, guid: 24bc2c1a84a152e49bdc9ed4060e28c2, type: 3}
+  - {fileID: 1257740522646724574, guid: c3fdad1d20afe1447927969e85892a7e, type: 3}
+  - {fileID: 7114253375618137005, guid: 1bb12ce6321115a4894cf02d4470af06, type: 3}
+  count: 0
+  itenPresent: 0
+--- !u!114 &1329093956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329093947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba64da33933fd9c4ca4bbf1b7b27fb4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReceived: {fileID: 1329093955}
+  target: {fileID: 1080220150}
+  target2: {fileID: 1908293031}
+  car: {fileID: 1329093949}
+  rb: {fileID: 1329093950}
+  pickupEffect: {fileID: 1965343156803978, guid: aa8d6482d70a23445b4b2a928ed1b845,
+    type: 3}
+  pickupEffect1: {fileID: 3576924614362489592, guid: 4a919ff208278c347a4582e77e55ed83,
+    type: 3}
+  pickupEffect2: {fileID: 1297937073129364672, guid: 69418da21aaf4054dab4d022a61e1bd3,
+    type: 3}
+  pickupEffect3: {fileID: 1628744458893394, guid: e243632bb3aff9549abdcfcc2ef0c4f0,
+    type: 3}
+  pickupEffect4: {fileID: 0}
 --- !u!1001 &1330872510
 PrefabInstance:
   m_ObjectHideFlags: 0
