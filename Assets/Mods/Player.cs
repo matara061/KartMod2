@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     public GameObject kartBe;
     public GameObject camBe;
 
+    public GameObject KartAki;
+    public GameObject camAki;
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -52,6 +55,8 @@ public class Player : MonoBehaviour
             camMT.SetActive(true);
             kartBe.SetActive(false);
             camBe.SetActive(false);
+            KartAki.SetActive(false);
+            camAki.SetActive(false);
 
         }
         else
@@ -63,6 +68,8 @@ public class Player : MonoBehaviour
             camPet.SetActive(true);
             kartBe.SetActive(false);
             camBe.SetActive(false);
+            KartAki.SetActive(false);
+            camAki.SetActive(false);
 
         }
         else if (startManager.kart1 == 3) 
@@ -73,8 +80,21 @@ public class Player : MonoBehaviour
             camPet.SetActive(false);
             kartBe.SetActive(true);
             camBe.SetActive(true);
+            KartAki.SetActive(false);
+            camAki.SetActive(false);
         }
-            
+        else if (startManager.kart1 == 4)
+        {
+            KartMT.SetActive(false);
+            camMT.SetActive(false);
+            kartPet.SetActive(false);
+            camPet.SetActive(false);
+            kartBe.SetActive(false);
+            camBe.SetActive(false);
+            KartAki.SetActive(true);
+            camAki.SetActive(true);
+        }
+
     }
 
 }
