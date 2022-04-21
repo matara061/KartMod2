@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657975, g: 0.49641347, b: 0.5748174, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657946, g: 0.49641317, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -372,6 +372,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30276693}
   m_CullTransparentMesh: 1
+--- !u!1 &69933409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69933410}
+  - component: {fileID: 69933411}
+  m_Layer: 13
+  m_Name: GatilhoPlayer2
+  m_TagString: Player2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69933410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69933409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 346872920}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &69933411
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69933409}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.51390547, z: 2.8227122}
+  m_Center: {x: 0, y: 0.2209044, z: 0.28434044}
 --- !u!1 &92556277
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +446,50 @@ Transform:
   m_Father: {fileID: 346872920}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &93915265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93915266}
+  - component: {fileID: 93915267}
+  m_Layer: 13
+  m_Name: GatilhoPlayer1
+  m_TagString: Player1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93915266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93915265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352338705}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &93915267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93915265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.51390547, z: 2.8227122}
+  m_Center: {x: 0, y: 0.2209044, z: 0.28434044}
 --- !u!1 &102289244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1284,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50.000004, y: 39.791, z: 0}
+--- !u!1 &291094560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 291094561}
+  - component: {fileID: 291094562}
+  m_Layer: 13
+  m_Name: GatilhoPlayer1
+  m_TagString: Player1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &291094561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291094560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1700115388}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &291094562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291094560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2680155, y: 0.92494607, z: 2.736995}
+  m_Center: {x: -0.038933262, y: 0.052202, z: -0.057498813}
 --- !u!1001 &322214274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1434,7 +1566,22 @@ PrefabInstance:
     - target: {fileID: 2113364782174543337, guid: 156f6cab466e8ad418fe429418638cf8,
         type: 3}
       propertyPath: ShootButton
-      value: Fire1
+      value: Fire2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113364782174543337, guid: 156f6cab466e8ad418fe429418638cf8,
+        type: 3}
+      propertyPath: TurnInputName
+      value: Horizontal2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113364782174543337, guid: 156f6cab466e8ad418fe429418638cf8,
+        type: 3}
+      propertyPath: BrakeButtonName
+      value: Brake2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113364782174543337, guid: 156f6cab466e8ad418fe429418638cf8,
+        type: 3}
+      propertyPath: AccelerateButtonName
+      value: Accelerate2
       objectReference: {fileID: 0}
     - target: {fileID: 2113364782174543340, guid: 156f6cab466e8ad418fe429418638cf8,
         type: 3}
@@ -1605,6 +1752,50 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 711436531}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &416928596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416928597}
+  - component: {fileID: 416928598}
+  m_Layer: 0
+  m_Name: GatilhoPlayer2
+  m_TagString: Player2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &416928597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416928596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 641933187}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &416928598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416928596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.16, y: 1, z: 2.87}
+  m_Center: {x: 0, y: 0, z: -0.09}
 --- !u!1 &425019460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,6 +2157,12 @@ PrefabInstance:
     - {fileID: 1892445881086793655, guid: 34dab9ff075fd0a44a9551217d935191, type: 3}
     - {fileID: 856796134046728450, guid: 34dab9ff075fd0a44a9551217d935191, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 34dab9ff075fd0a44a9551217d935191, type: 3}
+--- !u!4 &509842003 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 894328421812734513, guid: 34dab9ff075fd0a44a9551217d935191,
+    type: 3}
+  m_PrefabInstance: {fileID: 509842002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &537106974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2485,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599899192}
   m_CullTransparentMesh: 1
+--- !u!1 &619484362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619484363}
+  - component: {fileID: 619484364}
+  m_Layer: 13
+  m_Name: GatilhoPlayer2
+  m_TagString: Player2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619484363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619484362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2001735730}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &619484364
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619484362}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2680155, y: 0.92494607, z: 2.736995}
+  m_Center: {x: -0.038933262, y: 0.052202, z: -0.057498813}
 --- !u!1001 &641933186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5165,6 +5406,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   select: 0
   stat: 1
+--- !u!1 &1860216986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860216987}
+  - component: {fileID: 1860216988}
+  m_Layer: 13
+  m_Name: GatilhoPlayer1
+  m_TagString: Player1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1860216987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860216986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 509842003}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1860216988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860216986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.16, y: 1, z: 2.87}
+  m_Center: {x: 0, y: 0, z: -0.09}
 --- !u!1001 &1902905590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6914,22 +7199,22 @@ PrefabInstance:
     - target: {fileID: 1697548051067923540, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
         type: 3}
       propertyPath: ShootButton
-      value: Fire2
+      value: Fire1
       objectReference: {fileID: 0}
     - target: {fileID: 1697548051067923540, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
         type: 3}
       propertyPath: TurnInputName
-      value: Horizontal2
+      value: Horizontal
       objectReference: {fileID: 0}
     - target: {fileID: 1697548051067923540, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
         type: 3}
       propertyPath: BrakeButtonName
-      value: Brake2
+      value: Brake
       objectReference: {fileID: 0}
     - target: {fileID: 1697548051067923540, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
         type: 3}
       propertyPath: AccelerateButtonName
-      value: Accelerate2
+      value: Accelerate
       objectReference: {fileID: 0}
     - target: {fileID: 1697548051067923541, guid: ecaf4c79c78fa8f1e8e2ca75a855c752,
         type: 3}
