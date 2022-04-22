@@ -21,6 +21,12 @@ public class Player : MonoBehaviour
     public GameObject KartAki;
     public GameObject camAki;
 
+    public GameObject KartJoao;
+    public GameObject camJoa;
+
+    public GameObject CuboT;
+    public GameObject camTia;
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -57,7 +63,10 @@ public class Player : MonoBehaviour
             camBe.SetActive(false);
             KartAki.SetActive(false);
             camAki.SetActive(false);
-
+            KartJoao.SetActive(false);
+            camJoa.SetActive(false);
+            CuboT.SetActive(false);
+            camTia.SetActive(false);
         }
         else
             if (startManager.kart1 == 2)
@@ -70,9 +79,13 @@ public class Player : MonoBehaviour
             camBe.SetActive(false);
             KartAki.SetActive(false);
             camAki.SetActive(false);
+            KartJoao.SetActive(false);
+            camJoa.SetActive(false);
+            CuboT.SetActive(false);
+            camTia.SetActive(false);
 
         }
-        else if (startManager.kart1 == 3) 
+        else if (startManager.kart1 == 3)
         {
             KartMT.SetActive(false);
             camMT.SetActive(false);
@@ -82,6 +95,10 @@ public class Player : MonoBehaviour
             camBe.SetActive(true);
             KartAki.SetActive(false);
             camAki.SetActive(false);
+            KartJoao.SetActive(false);
+            camJoa.SetActive(false);
+            CuboT.SetActive(false);
+            camTia.SetActive(false);
         }
         else if (startManager.kart1 == 4)
         {
@@ -93,6 +110,40 @@ public class Player : MonoBehaviour
             camBe.SetActive(false);
             KartAki.SetActive(true);
             camAki.SetActive(true);
+            KartJoao.SetActive(false);
+            camJoa.SetActive(false);
+            CuboT.SetActive(false);
+            camTia.SetActive(false);
+        }
+        else if (startManager.kart1 == 5)
+        {
+            KartMT.SetActive(false);
+            camMT.SetActive(false);
+            kartPet.SetActive(false);
+            camPet.SetActive(false);
+            kartBe.SetActive(false);
+            camBe.SetActive(false);
+            KartAki.SetActive(false);
+            camAki.SetActive(false);
+            KartJoao.SetActive(true);
+            camJoa.SetActive(true);
+            CuboT.SetActive(false);
+            camTia.SetActive(false);
+        }
+        else if (startManager.kart1 == 6)
+        {
+            KartMT.SetActive(false);
+            camMT.SetActive(false);
+            kartPet.SetActive(false);
+            camPet.SetActive(false);
+            kartBe.SetActive(false);
+            camBe.SetActive(false);
+            KartAki.SetActive(false);
+            camAki.SetActive(false);
+            KartJoao.SetActive(false);
+            camJoa.SetActive(false);
+            CuboT.SetActive(true);
+            camTia.SetActive(true);
         }
 
     }

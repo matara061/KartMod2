@@ -13,7 +13,11 @@ public class img : MonoBehaviour
     public Sprite raio;
     public Sprite nada;
     public ItemReceived item;
-    public ItemReceived item2;
+   public ItemReceived item2;
+   public ItemReceived item3;
+  // public ItemReceived item4;
+  // public ItemReceived item5;
+  // public ItemReceived item6;
     public Image imagem;
     public Image imagem2;
     // SpriteRenderer spriteR;
@@ -43,17 +47,17 @@ public class img : MonoBehaviour
             else
                     if (item.count == 1)
             {
-
+                imagem.sprite = capacete;
             }
             else
                     if (item.count == 2)
             {
-
+                imagem.sprite = raio;
             }
             else
                     if (item.count == 3)
             {
-
+                imagem.sprite = foguete;
             }
             else
                     if (item.count == 4)
@@ -77,17 +81,17 @@ public class img : MonoBehaviour
             else
                     if (item2.count == 1)
             {
-
+                imagem2.sprite = capacete;
             }
             else
                     if (item2.count == 2)
             {
-
+                imagem2.sprite = raio;
             }
             else
                     if (item2.count == 3)
             {
-
+                imagem2.sprite = foguete;
             }
             else
                     if (item2.count == 4)

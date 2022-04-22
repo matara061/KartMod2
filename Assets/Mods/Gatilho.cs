@@ -22,17 +22,39 @@ public GameFlowManager gameFlowManager;
      if (other.gameObject.CompareTag("Player2")){
 
          gameFlowManager.EndGame1(true);
+        
 
-     }
+        }
      
      if (other.gameObject.CompareTag("Player1")){
 
          gameFlowManager.EndGame(true);
+         
 
-     }
+        }
+        if (other.CompareTag("Player"))
+        {
+            StartCoroutine(Pickup(other));
+        }
 
 
-     
+
+
 }
+    IEnumerator Pickup(Collider player)
+    {
+        yield return new WaitForSeconds(6f);
+
+        // // Podemos utilizar a função abaixo para o efeito instanciar no game object escolhido ~ no caso, o carro.
+        // GameObject clone = (GameObject)Instantiate(pickupEffect, transform.position, transform.rotation);
+        //
+        // // para a hierarquia
+        // clone.transform.parent = player.transform;
+
+        //Efeito
+        //player.transform.localScale = new Vector3(100, 100, 100);
+
+
+    }
 
 }
