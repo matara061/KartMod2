@@ -154,6 +154,7 @@ MonoBehaviour:
   TurnInputName: Horizontal
   AccelerateButtonName: Accelerate
   BrakeButtonName: Brake
+  ShootButton: Fire1
 --- !u!1 &2113364782554712145
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,6 +669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roda (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2e9eb0c99bdb64899a5266fb89799b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2e9eb0c99bdb64899a5266fb89799b, type: 3}
 --- !u!4 &1936151396800587213 stripped
@@ -758,6 +764,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roda (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2e9eb0c99bdb64899a5266fb89799b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2e9eb0c99bdb64899a5266fb89799b, type: 3}
 --- !u!4 &1936151396398149058 stripped
@@ -847,6 +858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Roda (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2e9eb0c99bdb64899a5266fb89799b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2e9eb0c99bdb64899a5266fb89799b, type: 3}
@@ -1027,6 +1043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Roda
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2e9eb0c99bdb64899a5266fb89799b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2e9eb0c99bdb64899a5266fb89799b, type: 3}

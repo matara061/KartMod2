@@ -32,18 +32,18 @@ public GameFlowManager gameFlowManager;
          
 
         }
-        if (other.CompareTag("Player"))
-        {
-            StartCoroutine(Pickup(other));
-        }
+       // if (other.CompareTag("Player"))
+       // {
+          //  StartCoroutine(Pickup(other));
+      //  }
 
 
 
 
 }
-    IEnumerator Pickup(Collider player)
-    {
-        yield return new WaitForSeconds(6f);
+   // IEnumerator Pickup(Collider player)
+   // {
+       // yield return new WaitForSeconds(6f);
 
         // // Podemos utilizar a função abaixo para o efeito instanciar no game object escolhido ~ no caso, o carro.
         // GameObject clone = (GameObject)Instantiate(pickupEffect, transform.position, transform.rotation);
@@ -55,6 +55,6 @@ public GameFlowManager gameFlowManager;
         //player.transform.localScale = new Vector3(100, 100, 100);
 
 
-    }
+   // }
 
 }
